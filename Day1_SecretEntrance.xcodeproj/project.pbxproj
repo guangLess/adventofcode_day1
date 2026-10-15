@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		50246AFC30812B0B00AA8B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50246AE630812B0800AA8B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50246AED30812B0800AA8B0D;
+			remoteInfo = Day1_SecretEntrance;
+		};
+		50246B0630812B0B00AA8B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50246AE630812B0800AA8B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50246AED30812B0800AA8B0D;
+			remoteInfo = Day1_SecretEntrance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50246AEE30812B0800AA8B0D /* Day1_SecretEntrance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day1_SecretEntrance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50246AFB30812B0B00AA8B0D /* Day1_SecretEntranceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Day1_SecretEntranceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50246B0530812B0B00AA8B0D /* Day1_SecretEntranceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Day1_SecretEntranceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		50246AF030812B0800AA8B0D /* Day1_SecretEntrance */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Day1_SecretEntrance;
+			sourceTree = "<group>";
+		};
+		50246AFE30812B0B00AA8B0D /* Day1_SecretEntranceTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Day1_SecretEntranceTests;
+			sourceTree = "<group>";
+		};
+		50246B0830812B0B00AA8B0D /* Day1_SecretEntranceUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Day1_SecretEntranceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50246AEB30812B0800AA8B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246AF830812B0B00AA8B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246B0230812B0B00AA8B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50246AE530812B0800AA8B0D = {
+			isa = PBXGroup;
+			children = (
+				50246AF030812B0800AA8B0D /* Day1_SecretEntrance */,
+				50246AFE30812B0B00AA8B0D /* Day1_SecretEntranceTests */,
+				50246B0830812B0B00AA8B0D /* Day1_SecretEntranceUITests */,
+				50246AEF30812B0800AA8B0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50246AEF30812B0800AA8B0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50246AEE30812B0800AA8B0D /* Day1_SecretEntrance.app */,
+				50246AFB30812B0B00AA8B0D /* Day1_SecretEntranceTests.xctest */,
+				50246B0530812B0B00AA8B0D /* Day1_SecretEntranceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50246AED30812B0800AA8B0D /* Day1_SecretEntrance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50246B0F30812B0B00AA8B0D /* Build configuration list for PBXNativeTarget "Day1_SecretEntrance" */;
+			buildPhases = (
+				50246AEA30812B0800AA8B0D /* Sources */,
+				50246AEB30812B0800AA8B0D /* Frameworks */,
+				50246AEC30812B0800AA8B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				50246AF030812B0800AA8B0D /* Day1_SecretEntrance */,
+			);
+			name = Day1_SecretEntrance;
+			packageProductDependencies = (
+			);
+			productName = Day1_SecretEntrance;
+			productReference = 50246AEE30812B0800AA8B0D /* Day1_SecretEntrance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50246AFA30812B0B00AA8B0D /* Day1_SecretEntranceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50246B1230812B0B00AA8B0D /* Build configuration list for PBXNativeTarget "Day1_SecretEntranceTests" */;
+			buildPhases = (
+				50246AF730812B0B00AA8B0D /* Sources */,
+				50246AF830812B0B00AA8B0D /* Frameworks */,
+				50246AF930812B0B00AA8B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50246AFD30812B0B00AA8B0D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				50246AFE30812B0B00AA8B0D /* Day1_SecretEntranceTests */,
+			);
+			name = Day1_SecretEntranceTests;
+			packageProductDependencies = (
+			);
+			productName = Day1_SecretEntranceTests;
+			productReference = 50246AFB30812B0B00AA8B0D /* Day1_SecretEntranceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50246B0430812B0B00AA8B0D /* Day1_SecretEntranceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50246B1530812B0B00AA8B0D /* Build configuration list for PBXNativeTarget "Day1_SecretEntranceUITests" */;
+			buildPhases = (
+				50246B0130812B0B00AA8B0D /* Sources */,
+				50246B0230812B0B00AA8B0D /* Frameworks */,
+				50246B0330812B0B00AA8B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50246B0730812B0B00AA8B0D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				50246B0830812B0B00AA8B0D /* Day1_SecretEntranceUITests */,
+			);
+			name = Day1_SecretEntranceUITests;
+			packageProductDependencies = (
+			);
+			productName = Day1_SecretEntranceUITests;
+			productReference = 50246B0530812B0B00AA8B0D /* Day1_SecretEntranceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50246AE630812B0800AA8B0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					50246AED30812B0800AA8B0D = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					50246AFA30812B0B00AA8B0D = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 50246AED30812B0800AA8B0D;
+					};
+					50246B0430812B0B00AA8B0D = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 50246AED30812B0800AA8B0D;
+					};
+				};
+			};
+			buildConfigurationList = 50246AE930812B0800AA8B0D /* Build configuration list for PBXProject "Day1_SecretEntrance" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50246AE530812B0800AA8B0D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 50246AEF30812B0800AA8B0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50246AED30812B0800AA8B0D /* Day1_SecretEntrance */,
+				50246AFA30812B0B00AA8B0D /* Day1_SecretEntranceTests */,
+				50246B0430812B0B00AA8B0D /* Day1_SecretEntranceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50246AEC30812B0800AA8B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246AF930812B0B00AA8B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246B0330812B0B00AA8B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50246AEA30812B0800AA8B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246AF730812B0B00AA8B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50246B0130812B0B00AA8B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50246AFD30812B0B00AA8B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50246AED30812B0800AA8B0D /* Day1_SecretEntrance */;
+			targetProxy = 50246AFC30812B0B00AA8B0D /* PBXContainerItemProxy */;
+		};
+		50246B0730812B0B00AA8B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50246AED30812B0800AA8B0D /* Day1_SecretEntrance */;
+			targetProxy = 50246B0630812B0B00AA8B0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		50246B0D30812B0B00AA8B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		50246B0E30812B0B00AA8B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		50246B1030812B0B00AA8B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coffee.Day1-SecretEntrance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		50246B1130812B0B00AA8B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coffee.Day1-SecretEntrance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		50246B1330812B0B00AA8B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coffee.Day1-SecretEntranceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Day1_SecretEntrance.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Day1_SecretEntrance";
+			};
+			name = Debug;
+		};
+		50246B1430812B0B00AA8B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coffee.Day1-SecretEntranceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Day1_SecretEntrance.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Day1_SecretEntrance";
+			};
+			name = Release;
+		};
+		50246B1630812B0B00AA8B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coffee.Day1-SecretEntranceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Day1_SecretEntrance;
+			};
+			name = Debug;
+		};
+		50246B1730812B0B00AA8B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "coffee.Day1-SecretEntranceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Day1_SecretEntrance;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50246AE930812B0800AA8B0D /* Build configuration list for PBXProject "Day1_SecretEntrance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50246B0D30812B0B00AA8B0D /* Debug */,
+				50246B0E30812B0B00AA8B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50246B0F30812B0B00AA8B0D /* Build configuration list for PBXNativeTarget "Day1_SecretEntrance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50246B1030812B0B00AA8B0D /* Debug */,
+				50246B1130812B0B00AA8B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50246B1230812B0B00AA8B0D /* Build configuration list for PBXNativeTarget "Day1_SecretEntranceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50246B1330812B0B00AA8B0D /* Debug */,
+				50246B1430812B0B00AA8B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50246B1530812B0B00AA8B0D /* Build configuration list for PBXNativeTarget "Day1_SecretEntranceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50246B1630812B0B00AA8B0D /* Debug */,
+				50246B1730812B0B00AA8B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50246AE630812B0800AA8B0D /* Project object */;
+}
