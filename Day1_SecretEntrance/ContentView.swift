@@ -16,7 +16,6 @@ struct ContentView: View {
 
 struct Dail: View {
     let dotCount = 100
-    let dotSize: CGFloat = 5
     let amplitude: CGFloat = 20
     let frequency: Double = 5
 
@@ -35,39 +34,7 @@ struct Dail: View {
                     ForEach(0..<dotCount, id: \.self) { i in
                         let angle = Angle(degrees: Double(i) / Double(dotCount) * 360)
 
-/*
-                        let positionedAngleMove = 3 + 2*cos(angle.radians * 58)
-
-
-                        let ripple = amplitude * positionedAngleMove * sin(
-                            1 * angle.radians - time
-                        )
-
-                        let waveB = 60 * sin(120 * angle.radians + time*0.5)
-
-                        let r = radius + ripple + waveB
-
- */
-
-
-                        let ripple = amplitude
-                                     * sin(frequency * angle.radians - time)
-                                     * cos(time)
-                        let r = radius + ripple + 30
-
-
-                        /* wave
-                        let waveA = 16 * sin(3 * angle.radians - time * 2)
-                        let waveB = 6 * sin(11 * angle.radians + time)
-
-                        let r = radius + waveA + waveB
-                         */
-
-
-                        Circle()
-                            .frame(width: dotSize, height: dotSize)
-                            .offset(x: r * cos(angle.radians),
-                                    y: r * sin(angle.radians))
+                        Creature(angle: angle, radius: radius, time: time, amplitude: amplitude, frequency: frequency)
 
                         Text("\(i)")
                             .font(.caption2)
@@ -93,6 +60,28 @@ struct Dail: View {
 }
 
 
+
+struct Creature: View {
+    let dotSize: CGFloat = 5
+
+    let angle: Angle
+    let radius: CGFloat
+    let time: Double
+    let amplitude: CGFloat
+    let frequency: Double
+
+    var body: some View {
+        let ripple = amplitude
+                     * sin(frequency * angle.radians - time)
+                     * cos(time)
+        let r = radius + ripple + 30
+
+        Circle()
+            .frame(width: dotSize, height: dotSize)
+            .offset(x: r * cos(angle.radians),
+                    y: r * sin(angle.radians))
+    }
+}
 
 struct Needle: View {
 
@@ -143,3 +132,36 @@ struct Needle: View {
 #Preview {
     ContentView()
 }
+
+
+
+/**
+keep references for experimentation code
+ /*
+  let positionedAngleMove = 3 + 2*cos(angle.radians * 58)
+
+
+  let ripple = amplitude * positionedAngleMove * sin(
+  1 * angle.radians - time
+  )
+
+  let waveB = 60 * sin(120 * angle.radians + time*0.5)
+
+  let r = radius + ripple + waveB
+
+
+
+
+  /* wave
+   let waveA = 16 * sin(3 * angle.radians - time * 2)
+   let waveB = 6 * sin(11 * angle.radians + time)
+
+   let r = radius + waveA + waveB
+   */
+
+
+
+
+  */
+
+ */
