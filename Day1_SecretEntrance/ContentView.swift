@@ -18,7 +18,7 @@ struct Dail: View {
     let dotCount = 100
     let dotSize: CGFloat = 5
     let amplitude: CGFloat = 20
-    let frequency: Double = 9
+    let frequency: Double = 5
 
     @State private var lineAngle: Double = 0
 
@@ -35,12 +35,33 @@ struct Dail: View {
                     ForEach(0..<dotCount, id: \.self) { i in
                         let angle = Angle(degrees: Double(i) / Double(dotCount) * 360)
 
+/*
+                        let positionedAngleMove = 3 + 2*cos(angle.radians * 58)
 
-                        let ripple = amplitude * sin(
-                            frequency * angle.radians - time * 2
+
+                        let ripple = amplitude * positionedAngleMove * sin(
+                            1 * angle.radians - time
                         )
 
-                        let r = radius + ripple
+                        let waveB = 60 * sin(120 * angle.radians + time*0.5)
+
+                        let r = radius + ripple + waveB
+
+ */
+
+
+                        let ripple = amplitude
+                                     * sin(frequency * angle.radians - time)
+                                     * cos(time)
+                        let r = radius + ripple + 30
+
+
+                        /* wave
+                        let waveA = 16 * sin(3 * angle.radians - time * 2)
+                        let waveB = 6 * sin(11 * angle.radians + time)
+
+                        let r = radius + waveA + waveB
+                         */
 
 
                         Circle()
@@ -60,7 +81,7 @@ struct Dail: View {
                         .frame(width: dotSize, height: dotSize)
                         .position(center)
 
-                    Needle(center: center, radius: radius + 100)
+                    Needle(center: center, radius: radius, size: geometry.size)
                 }
                 .frame(width: geometry.size.width,
                        height: geometry.size.height)
@@ -77,13 +98,15 @@ struct Needle: View {
 
     let center: CGPoint
     let radius: Double
+    let size: CGSize
 
     @State private var angle: Double = 0
 
     var body: some View {
+        let maxDistance = sqrt(pow(size.width, 2) + pow(size.height, 2))
         let endpoint = CGPoint(
-            x: center.x + radius * cos(angle),
-            y: center.y + radius * sin(angle)
+            x: center.x + maxDistance * cos(angle),
+            y: center.y + maxDistance * sin(angle)
         )
 
         Path { path in
