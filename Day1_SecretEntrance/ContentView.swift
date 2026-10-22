@@ -9,77 +9,54 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Dail()
+        DialView()
             .padding(50)
     }
 }
 
-struct Dail: View {
-    let dotCount = 100
-    let amplitude: CGFloat = 20
-    let frequency: Double = 5
+struct DialView: View {
 
+    let dotCount = 100
     @State private var lineAngle: Double = 0
 
+    @State var direction: Direction = .left
+    @State var numberOfStep: Int = 1
+    @State var dial = Dial()
+
     var body: some View {
-        TimelineView(.animation) { timeline in
 
-            let time = timeline.date.timeIntervalSinceReferenceDate
+        GeometryReader { geometry in
+            let radius = min(geometry.size.width, geometry.size.height) / 2
+            let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
 
-            GeometryReader { geometry in
-                let radius = min(geometry.size.width, geometry.size.height) / 2
-                let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
+            ZStack {
+                ForEach(0..<dotCount, id: \.self) { i in
+                    let angle = Angle(degrees: Double(i) / Double(dotCount) * 360)
 
-                ZStack {
-                    ForEach(0..<dotCount, id: \.self) { i in
-                        let angle = Angle(degrees: Double(i) / Double(dotCount) * 360)
+                    Text("\(i)")
+                        .font(.caption2)
+                        .fontWeight(.ultraLight)
+                        .offset(x: (radius + 30) * cos(angle.radians),
+                                y: (radius + 30) * sin(angle.radians))
 
-                        Creature(angle: angle, radius: radius, time: time, amplitude: amplitude, frequency: frequency)
-
-                        Text("\(i)")
-                            .font(.caption2)
-                            .fontWeight(.ultraLight)
-                            .offset(x: (radius + 30) * cos(angle.radians),
-                                    y: (radius + 30) * sin(angle.radians))
-
-                    }
-
-                    Circle()
-                        .frame(width: dotSize, height: dotSize)
-                        .position(center)
-
-                    Needle(center: center, radius: radius, size: geometry.size)
                 }
-                .frame(width: geometry.size.width,
-                       height: geometry.size.height)
 
+                Circle()
+                    .frame(width: 5, height: 5)
+                    .position(center)
+
+                Needle(center: center, radius: radius, size: geometry.size, angle: dial.angle)
+
+                InputView(selection: $direction,
+                          commitedValue: $numberOfStep,
+                          dial: dial)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
             }
+            .frame(width: geometry.size.width,
+                   height: geometry.size.height)
 
         }
-    }
-}
 
-
-
-struct Creature: View {
-    let dotSize: CGFloat = 5
-
-    let angle: Angle
-    let radius: CGFloat
-    let time: Double
-    let amplitude: CGFloat
-    let frequency: Double
-
-    var body: some View {
-        let ripple = amplitude
-                     * sin(frequency * angle.radians - time)
-                     * cos(time)
-        let r = radius + ripple + 30
-
-        Circle()
-            .frame(width: dotSize, height: dotSize)
-            .offset(x: r * cos(angle.radians),
-                    y: r * sin(angle.radians))
     }
 }
 
@@ -89,7 +66,7 @@ struct Needle: View {
     let radius: Double
     let size: CGSize
 
-    @State private var angle: Double = 0
+    let angle: Double
 
     var body: some View {
         let maxDistance = sqrt(pow(size.width, 2) + pow(size.height, 2))
@@ -110,22 +87,23 @@ struct Needle: View {
             }
             .strokedPath(StrokeStyle(lineWidth: radius))
         )
-        .gesture(
-            DragGesture()
-                .onChanged { value in
-                    let dx = value.location.x - center.x
-                    let dy = value.location.y - center.y
-
-                    angle = atan2(dy, dx)
-                }
-        )
-
     }
 }
 /**
 
  .offset(x: radius * cos(angle.radians),
  y: radius * sin(angle.radians))
+
+
+ .gesture(
+ DragGesture()
+ .onChanged { value in
+ let dx = value.location.x - center.x
+ let dy = value.location.y - center.y
+
+ angle = atan2(dy, dx)
+ }
+ )
 
  */
 
@@ -158,10 +136,6 @@ keep references for experimentation code
 
    let r = radius + waveA + waveB
    */
-
-
-
-
   */
 
  */
