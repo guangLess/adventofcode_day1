@@ -20,7 +20,6 @@ struct DialView: View {
     @State private var lineAngle: Double = 0
 
     @State var direction: Direction = .left
-    @State var numberOfStep: DailInput?
     @State var dial = Dial()
 
     var body: some View {
@@ -29,7 +28,6 @@ struct DialView: View {
             .frame(minWidth: 200, minHeight: 200)
 
             InputView(selection: $direction,
-                      commitedValue: $numberOfStep,
                       dial: dial)
             .border(.green, width: 1)
         }
