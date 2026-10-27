@@ -7,11 +7,10 @@ import SwiftUI
 
 struct InputView: View {
     @Binding var selection: Direction
-    @Binding var commitedValue: Int
+    @Binding var commitedValue: DailInput?
+    @State var inputValue: Int?
 
     var dial: Dial
-
-    @State var inputValue: Int? // draft input and committed input
 
     var numberInString: String {
         switch inputValue {
@@ -42,10 +41,12 @@ struct InputView: View {
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 100)
                 .onSubmit {
-                    if let inputVal = inputValue {
+                    do {
+                        let inputVal = try DailInput(input: inputValue.map(String.init))
                         commitedValue = inputVal
-
-                        dial.turn(by: inputVal, direction: selection)
+                        dial.turn(by: inputVal.content, direction: selection)
+                    } catch {
+                        // todo: error handle text in the input box
                     }
                 }
             }
@@ -79,5 +80,5 @@ public enum InputError: Error {
 }
 
 #Preview {
-    InputView(selection: .constant(.left), commitedValue: .constant(1), dial: Dial())
+    InputView(selection: .constant(.left), commitedValue: .constant(try! DailInput(input: "2")), dial: Dial())
 }

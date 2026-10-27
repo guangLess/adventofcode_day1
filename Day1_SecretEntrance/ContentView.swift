@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-extension Color {
-    static let neonGreen = Color(red: 57 / 255, green: 255 / 255, blue: 20 / 255)
-}
-
 struct ContentView: View {
     var body: some View {
         DialView()
@@ -24,7 +20,7 @@ struct DialView: View {
     @State private var lineAngle: Double = 0
 
     @State var direction: Direction = .left
-    @State var numberOfStep: Int = 1
+    @State var numberOfStep: DailInput?
     @State var dial = Dial()
 
     var body: some View {
@@ -78,7 +74,6 @@ struct Needle: View {
     let center: CGPoint
     let radius: Double
     let size: CGSize
-
     let angle: Double
 
     var body: some View {
@@ -102,53 +97,11 @@ struct Needle: View {
         )
     }
 }
-/**
 
- .offset(x: radius * cos(angle.radians),
- y: radius * sin(angle.radians))
-
-
- .gesture(
- DragGesture()
- .onChanged { value in
- let dx = value.location.x - center.x
- let dy = value.location.y - center.y
-
- angle = atan2(dy, dx)
- }
- )
-
- */
+extension Color {
+    static let neonGreen = Color(red: 57 / 255, green: 255 / 255, blue: 20 / 255)
+}
 
 #Preview {
     ContentView()
 }
-
-
-
-/**
-keep references for experimentation code
- /*
-  let positionedAngleMove = 3 + 2*cos(angle.radians * 58)
-
-
-  let ripple = amplitude * positionedAngleMove * sin(
-  1 * angle.radians - time
-  )
-
-  let waveB = 60 * sin(120 * angle.radians + time*0.5)
-
-  let r = radius + ripple + waveB
-
-
-
-
-  /* wave
-   let waveA = 16 * sin(3 * angle.radians - time * 2)
-   let waveB = 6 * sin(11 * angle.radians + time)
-
-   let r = radius + waveA + waveB
-   */
-  */
-
- */
