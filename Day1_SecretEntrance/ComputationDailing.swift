@@ -8,27 +8,30 @@
 import Foundation
 import SwiftUI
 
-public enum Direction: String, CaseIterable, Identifiable {
-
-    case right
-    case left
-    public var id: String { rawValue }
-}
 
 @Observable
-// config of the data structure? how do I call it
 final class Dial {
     private(set) var code = 0
     private var numericalCircle: CyclicArray
 
     var angle: Double = .zero
 
+    private let totalCount: Int
+
     init(startIndex: Int = 50, range: [Int] = Array(0..<100)) {
         self.numericalCircle = CyclicArray(startIndex: startIndex,
                                             thisArray: range)
+        self.totalCount = range.count
+        self.angle = -Double(startIndex) * (2 * Double.pi / Double(totalCount))
     }
 
-    func dial(number: Int, to direction: Direction) {
+
+    func turn(by number: Int, direction: Direction) {
+        advance(number: number, to: direction)
+        rotate(number: number, direction: direction)
+    }
+
+    private func advance(number: Int, to direction: Direction) {
         for _ in 1...number {
             switch direction {
             case .right:
@@ -43,14 +46,14 @@ final class Dial {
         }
     }
 
-    func rotate(number: Int, direction: Direction) {
-        let radiansPerNumber = 2 * Double.pi / 100
+    private func rotate(number: Int, direction: Direction) {
+        let radiansPerNumber = 2 * Double.pi / Double(totalCount)
         let change = Double(number) * radiansPerNumber
         switch direction {
         case .right:
-            angle -= change
-        case .left:
             angle += change
+        case .left:
+            angle -= change
         }
     }
 }
@@ -58,11 +61,11 @@ final class Dial {
 // Data structure
 public struct CyclicArray {
 
-    private let startIndex: Int // set make it inject init later
+    private let startIndex: Int
     private let thisArray: [Int]
 
     private(set) var currentIndex: Int
-    private var lastIndex: Int { // make it more permonent later, like only update it if thisArray is updated
+    private var lastIndex: Int {
         thisArray.count - 1
     }
 
@@ -73,11 +76,11 @@ public struct CyclicArray {
         self.currentIndex = startIndex
     }
 
-    // public
+    @discardableResult
     mutating func next() -> Int {
         var nextIndex = currentIndex + 1
 
-        if nextIndex >= thisArray.count {
+        if nextIndex > lastIndex {
             nextIndex = 0
         }
         currentIndex = nextIndex
@@ -85,10 +88,11 @@ public struct CyclicArray {
         return thisArray[nextIndex]
     }
 
+    @discardableResult
     mutating func previous() -> Int {
         var preIndex = currentIndex - 1
 
-        if preIndex <= 0 {
+        if preIndex < 0 {
             preIndex = lastIndex
         }
         currentIndex = preIndex
@@ -98,4 +102,11 @@ public struct CyclicArray {
     mutating func reset() {
         currentIndex = startIndex
     }
+}
+
+
+public enum Direction: String, CaseIterable, Identifiable {
+    case right
+    case left
+    public var id: String { rawValue }
 }

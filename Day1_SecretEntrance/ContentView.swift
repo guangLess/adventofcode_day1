@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+extension Color {
+    static let neonGreen = Color(red: 57 / 255, green: 255 / 255, blue: 20 / 255)
+}
+
 struct ContentView: View {
     var body: some View {
         DialView()
@@ -24,7 +28,19 @@ struct DialView: View {
     @State var dial = Dial()
 
     var body: some View {
+        VStack(alignment: .trailing, spacing: 8) {
+            dialGeometryView()
+            .frame(minWidth: 200, minHeight: 200)
 
+            InputView(selection: $direction,
+                      commitedValue: $numberOfStep,
+                      dial: dial)
+            .border(.green, width: 1)
+        }
+    }
+
+    @ViewBuilder
+    func dialGeometryView() -> some View {
         GeometryReader { geometry in
             let radius = min(geometry.size.width, geometry.size.height) / 2
             let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
@@ -38,25 +54,22 @@ struct DialView: View {
                         .fontWeight(.ultraLight)
                         .offset(x: (radius + 30) * cos(angle.radians),
                                 y: (radius + 30) * sin(angle.radians))
-
                 }
 
-                Circle()
-                    .frame(width: 5, height: 5)
+                Text("\(dial.code)")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .padding(8)
+                    .background(Circle().fill(Color.neonGreen))
                     .position(center)
 
                 Needle(center: center, radius: radius, size: geometry.size, angle: dial.angle)
-
-                InputView(selection: $direction,
-                          commitedValue: $numberOfStep,
-                          dial: dial)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
             }
             .frame(width: geometry.size.width,
                    height: geometry.size.height)
-
+            .border(.green, width: 1)
         }
-
     }
 }
 

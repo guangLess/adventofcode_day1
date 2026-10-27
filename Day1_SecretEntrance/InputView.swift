@@ -21,13 +21,9 @@ struct InputView: View {
         }
     }
 
-    let neonGreen = Color(red: 57 / 255, green: 255 / 255, blue: 20 / 255)
-
-
     var body: some View {
         VStack {
             HStack {
-                /// picker
                 Picker("", selection: $selection) {
                     ForEach(Direction.allCases) { side in
                         Text(side.rawValue)
@@ -36,13 +32,12 @@ struct InputView: View {
                     }
                 }
                 .pickerStyle(.segmented)
-                .tint(neonGreen)
+                .tint(.neonGreen)
 
                 TextField(
                     "Number 1 - 99",
                     value: $inputValue,
                     format: .number,
-                    //prompt: Text("1...99")
                 )
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 100)
@@ -50,12 +45,10 @@ struct InputView: View {
                     if let inputVal = inputValue {
                         commitedValue = inputVal
 
-                        dial.dial(number: inputVal, to: selection)
-                        dial.rotate(number: inputVal, direction: selection)
+                        dial.turn(by: inputVal, direction: selection)
                     }
                 }
             }
-            Text("-> \(selection.rawValue + numberInString)" + String(dial.code))
         }
     }
 }
